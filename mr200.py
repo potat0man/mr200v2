@@ -30,7 +30,6 @@ class MR200Client:
 			return result
 		except:
 			if not retry:
-				# allow one retry, first try to get params sometimes fail 
 				return self.__get_params(True)
 			raise ConnectionFailedException()
 
